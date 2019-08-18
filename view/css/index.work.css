@@ -1,0 +1,204 @@
+.section.work {
+    vertical-align:top;
+}
+
+.work-table-bg-wrapper {
+    position:relative;
+    overflow:hidden;
+}
+
+.section.work .work-table {
+    position:relative;
+    margin-bottom:35%;
+}
+
+.section.work .work-table-bg-wrapper > .work-table-bg {
+    position:absolute;
+    width:300%;
+    height:419px;
+    background-image:url('/img/work-table-bg.png');
+    background-repeat:repeat-x;
+    animation-name: moveWorkTableBg;
+    animation-timing-function: linear;
+    animation-duration:25s;
+    animation-iteration-count: infinite;
+}
+
+.work-entry-line {
+    position:relative;
+    width:100%;
+    padding:30px;
+    overflow:hidden;
+}
+
+.work-entry {
+    position:relative;
+    max-width:400px;
+    width:100%;
+}
+
+.work-entry.left {
+    float:left;
+    
+}
+
+.work-entry.right {
+    float:right;
+}
+
+.work-entry .symbol {
+    position:absolute;
+    left:-30px;
+    top:-30px;
+    width:80px;
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    z-index:4;
+}
+
+.work-entry .year {
+    position:absolute;
+    top:1px;
+    right:3px;
+    font-size:1.4em;
+    font-weight:bold;
+    color: rgba(255, 255, 255, 0.377);
+    text-align:right;
+    text-transform:uppercase;
+}
+
+.work-entry .symbol img {
+    position:absolute;
+    left:15px;
+    top:15px;
+    transform: rotate(15deg);
+    z-index:5;
+}
+
+.work-entry .symbol svg {
+    width:100%;
+    height:auto;
+}
+
+.work-entry .symbol .work-item .item .fill {
+    fill:#fff;
+}
+
+.work-entry .symbol .work-item .item .icon {
+    fill:#000;
+}
+
+.work-entry:hover .symbol .work-item .item, .work-entry:hover .symbol .work-item .item .icon , .work-entry .symbol:hover .work-item .shadow {
+    transition: all 0.15s ease-in-out;
+}
+
+.work-entry:hover .symbol.work-item .item {
+    transform: translate(10px, 10px);
+}
+
+.work-entry:hover .symbol .work-item .item .icon {
+    -webkit-animation:rotateWorkItem 2s linear infinite;
+    -moz-animation:rotateWorkItem 2s linear infinite;
+    animation:rotateWorkItem 2s linear infinite;
+}
+
+.work-entry .symbol .work-item .item > .stroke, .work-entry:hover .symbol .work-item .item .icon {
+    fill:#659DBD;
+}
+
+.work-entry:hover .symbol .work-item .shadow {
+    transform: translate(-10px, -10px);
+}
+
+.work-entry .content {
+    background-color:rgba(6, 88, 219, 0.377);
+    z-index:-1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow:hidden;
+    border:#eae7dc solid 1px;
+    transition: all 1s;
+}
+
+.work-entry:hover .content {
+    background-color:#659DBD;
+}
+
+.work-entry .content > .title {
+    padding:5px;
+    margin-left:50px;
+    text-transform:uppercase;
+}
+
+.work-entry .content > .text {
+    padding:5px;
+    font-size:1rem;
+}
+
+.work-entry .content > .text > a {
+    text-decoration:underline;
+    color:#333;
+}
+
+.work-entry .location-table {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+    background-color:#fff;
+    transition: all 1s;
+}
+
+.work-entry:hover .location-table {
+    background-color:#BC986A;
+}
+
+.work-entry .location-table > div {
+    display:table-row;
+}
+
+.work-entry .location-table > div > div {
+    display:table-cell;
+    width:auto;
+    vertical-align:middle;
+    padding:5px;
+}
+
+.work-entry .location-table > div > div > a {
+    text-decoration:underline;
+    color:#333;
+}
+
+.work-entry .location-table > div > div > i {
+    color:c
+}
+
+.work-entry:hover .location-table > div > div > i {
+    color:#eae7dc;
+}
+
+.step {
+    position:absolute;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width:25px;
+    height:25px;
+    background-color:#BC986A;
+    transform:scale(0);
+    transition: transform 0.5s;
+    z-index:-1;
+}
+
+.step.step-visible {
+     transform:scale(1);
+}
+
+@-moz-keyframes rotateWorkItem { 25% { -moz-transform: rotateX(25deg); } 75% { -moz-transform: rotateX(-25deg); }}
+@-webkit-keyframes rotateWorkItem { 25% { -webkit-transform: rotateX(25deg); } 75% { -webkit-transform: rotateX(-25deg); }}
+@keyframes rotateWorkItem { 25% { transform:rotateX(25deg); } 75% { transform:rotateX(-25deg); }}
+
+@-moz-keyframes moveWorkTableBg { 0% { -moz-transform: translateX(-50%);  }  50% { -moz-transform: translateX(-50%);  } 100% { -moz-transform: translateX(-100%);  } }
+@-webkit-keyframes moveWorkTableBg { 0% { -webkit-transform: translateX(-100%); }  50% { -webkit-transform: translateX(-50%); } 100% { -webkit-transform: translateX(-100%);} }
+@keyframes moveWorkTableBg { 0% {  transform:translateX(25%); }  50% { transform:translateX(50%); } 100% { transform:translateX(25%);}}

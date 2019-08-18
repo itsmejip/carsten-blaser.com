@@ -1,0 +1,58 @@
+
+.section.aboutme .inner-bg {
+    position:relative;
+}
+
+.section.aboutme .wave-wrapper{
+    position:absolute;
+    width:100%;
+    overflow: hidden;
+    height:150vh;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    z-index:-4;
+}
+
+.wave-wrapper .wave {
+    width: 150vh;
+    height: 190vh;
+    position: absolute;
+    top:  -10%;
+    left: 60%;
+    margin-left: -500px;
+    margin-top: -500px;
+    border-radius: 35%;
+    background: rgba(6, 88, 219, 0.377);
+    animation: wave 15s infinite linear;
+}
+
+.small-profile-pic {
+    margin:40px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border:2px solid #BC986A;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4); 
+}
+  
+@keyframes wave {
+from { transform: rotate(0deg);}
+from { transform: rotate(360deg);}
+}
+
+.image-slider img {
+    max-width:582px;
+    max-height:800px;
+}
+
+.image-slider > img.lazy-load {
+    display:none;
+}
+
+@media (max-width: 991.98px) {  
+    .image-slider img {
+        max-width:300px;
+        max-height:500px;
+    }
+}

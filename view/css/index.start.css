@@ -1,0 +1,54 @@
+
+.section.start {
+  background:url('/img/bg-start.jpg');
+  background-color:#eae7dc;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#jip-animated-sign {
+    display:inline-block;
+    width:350px;
+    height:auto;
+    margin-right:5px;
+    margin-top:40px;
+    margin-bottom:40px;
+    vertical-align:middle;
+}
+
+#jip-animated-sign .animated-path {
+    fill-opacity: 0;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;    
+    animation-name: DrawLine, FadeStroke, FillIn;
+    animation-duration: 4s, 1s, 1s;
+    animation-delay: 0s, 2.5s, 2.5s;
+  }
+
+  #jip-sign .animated-path {
+    fill: #659DBD;
+    stroke: #000;
+    stroke-miterlimit: 5;
+    stroke-dashArray: 1600;
+    stroke-dashoffset: 1600;
+  }
+  
+  @keyframes DrawLine {
+    to { stroke-dashOffset: 0; }
+  }
+  
+  @keyframes FadeStroke {
+    to { stroke-opacity: 0; }
+  }
+  
+  @keyframes FillIn {
+    from { fill-opacity: 0; }
+    to { fill-opacity: 1; }
+  }
+
+  @media (min-width: 992px) { 
+    .animated-sign-wrapper {
+        padding-top:120px;
+    }
+  }

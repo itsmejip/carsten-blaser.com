@@ -1,0 +1,5 @@
+.vscode
+resources/*
+html/shared/*
+html/img/*
+library/external/*

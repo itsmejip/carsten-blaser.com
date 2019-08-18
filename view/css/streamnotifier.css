@@ -1,0 +1,78 @@
+.stream-notifier {
+    display:none;
+    position:fixed;
+    top:0;
+    right:0;
+    background-color:#d8c3a5;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    border-bottom-left-radius: 10px;
+    z-index:1010;
+    overflow:hidden;
+}
+
+.stream-notifier > .timeline {
+    height:5px;
+    width:100%;   
+    display:block;
+    overflow:hidden;
+    background-color:#659DBD;
+    transition: width 10s;
+}
+
+.stream-notifier > .timeline.run {
+    width:1%;
+}
+
+.stream-notifier > .info {
+    display:table;
+    table-layout:fixed;
+}
+
+.stream-notifier > .info > .info-close, .info > .goto, .info > .text {
+    display:table-cell;
+    width:auto;
+    vertical-align:middle;
+    padding:5px;
+}
+
+.stream-notifier > .info > .goto {
+    text-align:right;
+}
+
+.stream-notifier > .info > .info-close {
+    text-align:left;
+    font-size:1.8rem;
+}
+
+.stream-notifier > .info > .text {
+    border-left: 1px solid #BC986A;
+    padding-left:20px;
+    padding-right:20px;
+    font-size:1rem;
+}
+
+.stream-notifier > .info > .info-close > a {
+    text-decoration:none;
+    color:#BC986A;
+}
+
+.stream-notifier a.goto-link {
+    display:inline-block;
+    text-decoration:none;
+    color:#000;
+}
+
+.stream-notifier > .info > .goto > a.goto-link {
+    color:#BC986A;
+}
+
+.stream-notifier > .info > .goto > a.goto-link:hover {
+     color:#659DBD;
+}
+
+.stream-notifier > .info > .text > a.goto-link > .fa-twitch {
+    color:#6441A4;
+    margin-right:15px;
+    transform: scale(2);
+}
